@@ -45,7 +45,10 @@
             }
           }
         }
-      }
+      },
+      "required": [
+        "maintainers"
+      ]
     },
     "sources": {
       "type": "object",
@@ -69,13 +72,29 @@
                     "category": {
                       "type": "string"
                     }
-                  }
+                  },
+                  "required": [
+                    "spec",
+                    "category"
+                  ]
                 }
               }
-            }
+            },
+            "required": [
+              "url",
+              "provides"
+            ]
           }
         }
-      }
+      },
+      "required": [
+        "blocks"
+      ]
     }
-  }
+  },
+  "required": [
+    "name",
+    "authors",
+    "sources"
+  ]
 }
