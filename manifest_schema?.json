@@ -1,0 +1,81 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number"
+    },
+    "issues": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "object",
+      "properties": {
+        "maintainers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "username_github": {
+                "type": "string"
+              },
+              "username_snap": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "developers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "username_github": {
+                "type": "string"
+              },
+              "username_snap": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "object",
+      "properties": {
+        "blocks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "provides": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "spec": {
+                      "type": "string"
+                    },
+                    "category": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
